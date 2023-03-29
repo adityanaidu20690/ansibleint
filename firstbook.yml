@@ -1,6 +1,10 @@
 ---
 - name: first playbook
-  hosts: test
+  hosts: localhost
   tasks:
   - name: ping the server
     ping:
+  - name: delete httpd
+    yum:
+     name: httpd
+     state: absent
