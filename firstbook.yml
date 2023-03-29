@@ -6,11 +6,11 @@
     ping:
   - name: print message
     debug: msg=addy
-  - name: stop
-    service:
-     name: httpd
-     state: stopped
   - name: delete httpd
     yum:
      name: httpd
-     state: absent
+     state: present
+  - name: service start
+    service:
+      name: httpd
+      state: started  
