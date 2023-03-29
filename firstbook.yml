@@ -4,11 +4,3 @@
   tasks:
   - name: ping the server
     ping:
-  - name: delete httpd
-    yum:
-     name: httpd
-     state: absent
-  - name: stop
-    yum:
-     name: httpd
-     state: stopped
