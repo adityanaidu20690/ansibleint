@@ -4,6 +4,8 @@
   tasks:
   - name: ping the server
     ping:
+  - name: print message
+    debug: msg=addy
   - name: stop
     service:
      name: httpd
