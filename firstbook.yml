@@ -5,7 +5,7 @@
   - name: ping the server
     ping:
   - name: stop
-    yum:
+    service:
      name: httpd
      state: stopped
   - name: delete httpd
