@@ -1,0 +1,6 @@
+---
+- name: first playbook
+  hosts: localhost
+  tasks:
+  - name: ping the server
+    ping:
