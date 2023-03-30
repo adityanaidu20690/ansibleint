@@ -1,6 +1,7 @@
 ---
 - name: first playbook
   hosts: localhost
+  gather_facts: true
   become: true
   tasks:
   - name: ping the server
