@@ -1,14 +1,15 @@
 ---
 - name: first playbook
   hosts: localhost
-  become: true
-  become_method: sudo
   tasks:
   - name: ping the server
     ping:
   - name: print message
     debug: msg=addy
   - name: start httpd
+    become_user: root
+    become_method: sudo
+    become: true
     yum:
      name: httpd
      state: present
