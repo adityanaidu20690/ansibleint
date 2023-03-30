@@ -1,15 +1,13 @@
 ---
 - name: first playbook
   hosts: localhost
-  gather_facts: true
-  become: jenkins
-  become_user: root
+  become: true
   tasks:
   - name: ping the server
     ping:
   - name: print message
     debug: msg=addy
-  - name: delete httpd
+  - name: start httpd
     yum:
      name: httpd
      state: present
