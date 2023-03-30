@@ -10,7 +10,7 @@
     become_user: root
     become_method: sudo
     become: true
-    ansible_become_password: admin
+    become_password: admin
     yum:
      name: httpd
      state: present
